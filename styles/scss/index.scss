@@ -1,0 +1,322 @@
+/* === VARS === */
+$main-color: rgba(0, 0, 0, 0.9);
+
+/* === MIXINS === */
+@mixin margin-centerer() {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+/* === FONTS === */
+$lato-font: 'Lato', sans-serif, Arial, Tahoma;
+
+@mixin lato-normal() {
+  font-family: $lato-font;
+  font-weight: 400;
+}
+
+@mixin lato-thin() {
+  font-family: $lato-font;
+  font-weight: 300;
+}
+
+@mixin lato-bold() {
+  font-family: $lato-font;
+  font-weight: 700;
+}
+
+@mixin lato-ultrabold() {
+  font-family: $lato-font;
+  font-weight: 900;
+}
+
+* {
+  @include lato-normal;
+}
+
+body {
+  background: url("../images/bg.jpg");
+
+  .margin {
+    @include margin-centerer;
+  }
+}
+
+header {
+  background: $main-color;
+  height: 43px;
+  section {
+    height: 100%;
+
+    #logo {
+      width: 20%;
+      text-align: left;
+      display: inline-block;
+
+      img {
+        margin-top: 6px;
+      }
+    }
+    nav {
+      height: 100%;
+      display: inline-block;
+      float: right;
+
+      width: 80%;
+      text-align: right;
+      ul {
+        height: 100%;
+        margin-top: 10px;
+
+        li {
+          height: 100%;
+
+          display: inline-block;
+          margin: 0 5px;
+          padding: 0 10px;
+          a {
+            text-decoration: none;
+            color: rgb(155, 155, 155);
+            font-size: 14px;
+          }
+        }
+
+        li:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+}
+
+main {
+  @include margin-centerer;
+  min-height: 650px;
+
+  .sub-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    padding-top: -2em;
+    background-color: black;
+    -webkit-box-shadow: 0px 6px 32px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 32px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 32px 0px rgba(0, 0, 0, 0.75);
+    transition: all .3s ease-in-out;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .titles {
+    width: 100%;
+    border-bottom: 1px solid rgb(63, 62, 56);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 3em;
+  }
+
+  .pics {
+    width: 500px;
+    height: 230px;
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+  }
+
+  #pic-filmography {
+    background-image: url("../images/mobile-screenshots/filmography.jpg");
+  }
+
+  #pic-sunnyorrainy {
+    background-image: url("../images/mobile-screenshots/sunny.png");
+  }
+
+  #pic-appetit {
+    background-image: url("../images/mobile-screenshots/appetit.jpg");
+  }
+
+  #pic-legalisimo {
+    background-image: url("http://i.imgur.com/KC7IpdU.jpg");
+  }
+
+  #pic-az {
+    background-image: url("../images/mobile-screenshots/az.jpg");
+  }
+
+  #pic-sleepio {
+
+    background-image: url("../images/mobile-screenshots/sleepio.png");
+  }
+
+  #pic-clickswipelist {
+
+    background-image: url("../images/mobile-screenshots/list.png");
+  }
+
+  #pic1 {
+    background-image: url("../images/websites-screenshots/algos.png");
+  }
+
+  #pic2 {
+    background-image: url("../images/websites-screenshots/tomcat.png");
+    height: 200px;
+  }
+
+  #pic3 {
+    background-image: url("../images/websites-screenshots/portfolio.png");
+  }
+
+  #pic4 {
+    background-image: url("../images/websites-screenshots/email-list-webapp.png");
+    height: 278px;
+  }
+
+  .sub-container:hover .pics {
+    opacity: 0.8;
+    transition: all .3s ease-in-out;
+  }
+
+  .plus {
+    opacity: 0.5;
+    display: none;
+    margin: auto;
+    /*-- Vertical Align-- */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .6s ease-in-out;
+    /*-- Vertical Align end-- */
+  }
+
+  .sub-container:hover .plus {
+    transition: all .6s ease-in-out;
+    display: inherit;
+  }
+
+  .website-title {
+    width: 500px;
+    padding: -5px 0;
+    background-color: rgb(255, 147, 30);
+    margin: 0 auto;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.5em;
+    background-color: rgb(255, 147, 30);
+    color: white;
+    text-shadow: 0px 1px 1px #000;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .description {
+    width: 500px;
+    min-height: 2.3em;
+    margin: 0 auto;
+    padding-top: 1px;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: white;
+  }
+
+  .description h4 {
+    color: rgb(255, 147, 30);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+    margin: -10px 0 5px 0;
+    font-size: 1.2em;
+    padding: 1em 1em 0;
+    font-weight: 900;
+  }
+
+  .description p {
+    padding: 0 1em;
+    margin-bottom: -5px;
+  }
+
+}
+
+
+/* =============FOOTER================== */
+footer {
+  color: rgb(150, 150, 150);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  min-width: 100%;
+  background-color: black;
+  height: 70px;
+  border-top: 5px solid rgb(255, 147, 30);
+  font-size: 13px;
+}
+
+#footer-div {
+  min-width: 500px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -0.5em;
+
+}
+
+.contact-img {
+  width: 17px;
+  margin-right: 5px;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+
+#mini-img{
+  width: 13px;
+}
+
+#footer-div h3 {
+  margin: 1em auto;
+  color: white;
+}
+
+#footer-content {
+  margin: -1em auto;
+  color: white;
+}
+
+#email-span a{
+  color: rgb(255,147,30);
+}
+
+#email-span {
+  animation: scale .7s infinite alternate;
+}
+
+#grey {
+  color: rgba(255,255,255, 0.5)
+}
+
+#contactme{
+  margin: 20px 0;
+  color: white;
+  font-weight: bolder;
+}
+
+/* ==== ONLY SAFARI ==== */
+@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+  ::i-block-chrome, body {
+    padding-bottom: -100px;
+
+    nav {
+      margin-top: -37px
+    }
+
+    #arrow-left, #arrow-right{
+      margin-top: -200px;
+    }
+
+    footer{
+      padding-bottom: -100px;
+    }
+  }
+}
+
+@import "slider";
+
